@@ -1,0 +1,55 @@
+* FSMRM - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+' + Nerd Fonts
+
+  *Need Awesome Font name* / *イケてる名前を募集中*
+
+** Overview
+
+   [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]] is a monospace font with a distinct slightly
+   cursive look. The fonts "FSMRM" (*need awesome fontname*) is based on
+   *Fantasque Sans Mono*, and add glpyhs for Japanese from  [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]],
+   and patched for [[https://github.com/ryanoasis/nerd-fonts][Nerd fonts]].
+
+** Font sources
+
+   Note:
+   All brand icons are trademarks of their respective owners and should
+   only be used to represent the company or product to which they refer.
+
+   Base fonts:
+   |---------------------+----------+--------------|
+   | Name                |  Version | License      |
+   |---------------------+----------+--------------|
+   | [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]] |       11 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]]   | 20150602 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[https://github.com/eosrei/twemoji-color-font][twemoji color font]]  |  v12.0.1 | [[https://github.com/eosrei/twemoji-color-font/blob/master/LICENSE-CC-BY.txt][CC BY-4.0]]    |
+   |---------------------+----------+--------------|
+   Icon fontset:
+   |-------------------------+---------------------+-----------------------|
+   | [[https://github.com/vorillaz/devicons][Devicons]]                | 2015/05/02(b574cde) | MIT/X11               |
+   | [[https://fontawesome.com/v4.7.0/][FontAwesome]]             | 4.7                 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]]          |
+   | [[https://github.com/AndreLZGava/font-awesome-extension][FontAwesome Extension]]   | v0.0.3              | [[https://github.com/AndreLZGava/font-awesome-extension/blob/master/LICENCE][MIT/X11]]               |
+   | [[https://github.com/Templarian/MaterialDesign-Webfont][Material Design]]         | v3.6.95             | [[https://github.com/Templarian/MaterialDesign-Webfont/blob/master/license.md][SIL OFL v1.1]]          |
+   | [[https://github.com/erikflowers/weather-icons][Weather Icons]]           | 2.0.10              | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]]          |
+   | [[https://github.com/powerline/powerline][Powerline]]               | 2013/01/19(c1bf60d) | [[https://raw.githubusercontent.com/powerline/powerline/develop/LICENSE][MIT/X11]]               |
+   | [[https://github.com/ryanoasis/powerline-extra-symbols][Powerline Extra Symbols]] | 2016/11/11(90b8494) | [[https://raw.githubusercontent.com/ryanoasis/powerline-extra-symbols/master/LICENSE][MIT/X11]]               |
+   | [[https://github.com/jloughry/Unicode][IEC Power Symbols]]       | 2015/02/28(4c79c6a) | [[https://github.com/jloughry/Unicode/blob/master/LICENSE.txt][MIT/X11]]               |
+   | [[https://github.com/Lukas-W/font-logos][font-logos]]              | v0.11               | [[https://github.com/lukas-w/font-logos/blob/master/LICENSE][Unlicense]]             |
+   | [[https://github.com/primer/octicons][octicons]]                | v4.4.0              | [[https://github.com/primer/octicons/blob/master/LICENSE][MIT/X11]]               |
+   | [[https://github.com/file-icons/icons/][file-icons]]              | 2019/06/01(de534d3) | [[https://github.com/file-icons/icons/blob/master/LICENSE.md][ISC License]] (MIT/X11) |
+   | [[https://github.com/domtronn/all-the-icons.el][all-the-icons.ttf]]       | 3.2.0               | [[https://github.com/domtronn/all-the-icons.el/blob/master/LICENSE][MIT/X11]]               |
+   |-------------------------+---------------------+-----------------------|
+   Optional: Emoji and Icons
+   |----------+---------------------+--------------------|
+   | Name     | Version             | License            |
+   |----------+---------------------+--------------------|
+   | [[http://users.teilar.gr/~g1951d/][Symbola]]  | v12.0               | [[http://users.teilar.gr/~g1951d/License.pdf][UFAS License]] (PDF) |
+   | [[https://github.com/gabrielelana/pomicons][Pomicons]] | 2014/05/06(a28c77e) | [[https://creativecommons.org/licenses/by-nc-nd/3.0/][CC BY-NC-ND 3.0]]    |
+   |----------+---------------------+--------------------|
+
+** TODO
+
+   - [ ] Some Symbol fonts are outdated.
+
+** References.
+
+   Thanks to
