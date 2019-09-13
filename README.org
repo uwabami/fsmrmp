@@ -8,6 +8,15 @@
    *Fantasque Sans Mono*, and add glpyhs for Japanese from  [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]],
    and patched icon fonts into into Private Use Area.
 
+** Build
+
+*** Ubuntu 19.04
+
+    #+begin_src shell
+sudo apt install unar python2 python-concurrent.futures python-fontforge
+make
+    #+end_src
+
 ** Font sources
 
    Note:
