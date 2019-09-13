@@ -6,6 +6,13 @@ import os
 import fontforge
 import psMat
 
+ASCENT = 1650
+DESCENT = 398
+OLD_EM = 1024
+EM = ASCENT + DESCENT
+SCALE_DOWN = 0.96
+X_TO_CENTER = EM * (1 - SCALE_DOWN) / 2
+
 PATCH_SET = [
     {
         "name": "Icon Symbol Font In Terminal Plus",
@@ -52,15 +59,11 @@ def _patch(font):
         symfont.close()
 
 def _transform_sym(symfont, info):
-    x_ratio = 1.0
-    y_ratio = 1.0
-    x_diff = 0
-    y_diff = 0
-    scale = psMat.scale(x_ratio, y_ratio)
-    translate = psMat.translate(x_diff, y_diff)
+    scale = psMat.scale(SCALE_DOWN)
+    x_to_center = X_TO_CENTER
+    translate = psMat.translate(x_to_center, 0)
     transform = psMat.compose(scale, translate)
     symfont.transform(transform)
-
 
 def _copy_glyphs(font, symfont, info):
     for encoding in range(info["sym_start"], info["sym_end"] + 1):

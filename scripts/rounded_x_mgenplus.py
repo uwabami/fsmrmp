@@ -2,6 +2,7 @@
 ## rounded mgen plus
 # Ascent: 881
 # Descent: 143
+# Width: 1024
 # EM: 1024
 
 from os.path import basename, splitext
@@ -12,7 +13,7 @@ ASCENT = 1650
 DESCENT = 398
 OLD_EM = 1024
 EM = ASCENT + DESCENT
-SCALE_DOWN = 0.98
+SCALE_DOWN = 0.94 # 1650/(881*2.0)
 X_TO_CENTER = EM * (1 - SCALE_DOWN) / 2
 HANKAKU_KANA = (0xFF60, 0xFF9F)
 OBLIQUE_SKEW = 0.2
