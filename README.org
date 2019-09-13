@@ -14,7 +14,7 @@
     - make
     - python2: ← because of python-fontforge's dependency
     - python-concurrent: for parallel builds
-    - pyhhon-fontforge
+    - python-fontforge
     - unar: expand donwload files
 *** Ubuntu 19.04, Debian (>= 10.0)
     #+begin_src shell
