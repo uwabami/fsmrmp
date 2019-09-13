@@ -10,15 +10,19 @@
 
 ** Build
 
-*** Ubuntu 19.04
-
+*** Requirements
+    - make
+    - python2: ← because of python-fontforge's dependency
+    - python-concurrent: for parallel builds
+    - pyhhon-fontforge
+    - unar: expand donwload files
+*** Ubuntu 19.04, Debian (>= 10.0)
     #+begin_src shell
-sudo apt install unar python2 python-concurrent.futures python-fontforge
+sudo apt install make wget unar python2 python-concurrent.futures python-fontforge
 make
     #+end_src
-
+    check =dists= directory.
 ** Font sources
-
    Note:
    All brand icons are trademarks of their respective owners and should
    only be used to represent the company or product to which they refer.
