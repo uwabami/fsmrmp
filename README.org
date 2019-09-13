@@ -1,12 +1,12 @@
 #+startup: content
-* FSMRM - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+'
+* FSMRMP - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+'
 
 ** Overview
 
    [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]] is a monospace font with a distinct slightly
-   cursive look. The fonts "FSMRM" (*wanted! awesome fontname*) is based on
+   cursive look. The fonts "FSMRMP" (*wanted! awesome fontname*) is based on
    *Fantasque Sans Mono*, and add glpyhs for Japanese from  [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]],
-   and patched for [[https://github.com/ryanoasis/nerd-fonts][Nerd fonts]].
+   and patched icon fonts into into Private Use Area.
 
 ** Font sources
 
