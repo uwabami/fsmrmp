@@ -58,7 +58,7 @@ def generate(hankaku, zenkaku, emoji, version):
     # font.removeOverlap()
     font.autoHint()
     font.autoInstr()
-    print "Generate " + opts["out_file"]
+    print("Generate " + opts["out_file"])
     font.generate("tmp/" + opts["out_file"], flags=("opentype",))
     return 0
 

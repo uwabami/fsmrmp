@@ -18,7 +18,14 @@ PATCH_SET = [
         "name": "Icon Symbol Font In Terminal Plus",
         "filename": "isfit-plus.ttf",
         "sym_start": 0xE000,
-        "sym_end": 0xEEDF,
+        "sym_end": 0xEEFF,
+        "src_start": None,
+    },
+    {
+        "name": "Icon Symbol Font In Terminal Plus",
+        "filename": "isfit-plus.ttf",
+        "sym_start": 0xF000,
+        "sym_end": 0xF8FF,
         "src_start": None,
     },
 ]
@@ -32,7 +39,7 @@ def patch(in_file, out_dir):
         if exception.errno != errno.EEXIST:
             raise
     out_file = os.path.join(out_dir, os.path.basename(in_file))
-    print "Generated " + out_file
+    print("Generated " + out_file)
     font.generate(out_file)
     return 0
 

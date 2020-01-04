@@ -1,6 +1,5 @@
 #+startup: content
 * FSMRMP - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+'
-
 ** Overview
 
    [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]] is a monospace font with a distinct slightly
@@ -9,16 +8,15 @@
    and patched icon fonts into into Private Use Area.
 
 ** Build
-
 *** Requirements
     - make
-    - python2: ← because of python-fontforge's dependency
-    - python-concurrent: for parallel builds
-    - python-fontforge
+    - python3:
+    - python3-concurrent: for parallel builds
+    - python3-fontforge
     - unar: expand donwload files
 *** Ubuntu 19.04, Debian (>= 10.0)
     #+begin_src shell
-sudo apt install make wget unar python2 python-concurrent.futures python-fontforge
+sudo apt install make wget unar python3 python3-concurrent.futures python3-fontforge
 make
     #+end_src
     check =dists= directory.

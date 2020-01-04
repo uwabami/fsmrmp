@@ -18,7 +18,7 @@ def modify(in_file):
     _set_new_em(font)
     _set_proportion(font)
     out_file = "tmp/modified-" + basename(in_file)
-    print "Generate " + out_file
+    print("Generate " + out_file)
     font.generate(out_file, flags=("opentype",))
     return 0
 

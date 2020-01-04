@@ -24,7 +24,7 @@ def modify(in_file):
     _set_proportion(font)
     _zenkaku_space(font)
     out_file = "tmp/modified-" + basename(in_file)
-    print "Generate " + out_file
+    print("Generate " + out_file)
     font.generate(out_file, flags=("opentype",))
     return 0
 
@@ -35,7 +35,7 @@ def oblique(in_file):
     in_style = name.split("-")[-1]
     style = "oblique" if in_style == "regular" else "bold-oblique"
     out_file = "tmp/modified-rounded-x-mgenplus-1mn-{0}{1}".format(style, ext)
-    print "Generate " + out_file
+    print("Generate " + out_file)
     font.generate(out_file, flags=("opentype",))
     return 0
 

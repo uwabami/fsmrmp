@@ -7,7 +7,7 @@ all: build
 build: download
 	@[ -d $(TMPD) ] || mkdir -p $(TMPD)
 	@PYTHONPATH=$(CURDIR)/scripts \
-	  python2 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
+	  python3 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
 
 download: dl_rmgen dl_fsm dl_twemoji dl_icons
 
