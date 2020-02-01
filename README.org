@@ -5,7 +5,7 @@
    [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]] is a monospace font with a distinct slightly
    cursive look. The fonts "FSMRMP" (*wanted! awesome fontname*) is based on
    *Fantasque Sans Mono*, and add glpyhs for Japanese from  [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]],
-   and patched icon fonts into into Private Use Area.
+   and patched icon fonts into Private Use Area.
 
 ** Build
 *** Requirements
