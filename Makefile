@@ -46,7 +46,7 @@ dl_twemoji:
 
 dl_icons:
 	@if [ ! -f $(SRCD)/isfit-plus.ttf ] ; then\
-	  wget https://github.com/uwabami/all-the-icons-in-terminal/raw/master/dists/isfit-plus.ttf -O $(SRCD)/isfit-plus.ttf ;\
+	  wget https://github.com/uwabami/isfit-plus/raw/master/dists/isfit-plus.ttf -O $(SRCD)/isfit-plus.ttf ;\
 	fi
 
 clean:
