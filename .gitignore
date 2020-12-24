@@ -1,3 +1,6 @@
 *.pyc
 *.ttf
 *.otf
+sourceFonts
+dists
+tmp

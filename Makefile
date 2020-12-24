@@ -6,6 +6,7 @@ all: build
 
 build: download
 	@[ -d $(TMPD) ] || mkdir -p $(TMPD)
+	@[ -d $(DIST) ] || mkdir -p $(DIST)
 	@PYTHONPATH=$(CURDIR)/scripts \
 	  python3 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
 
@@ -68,3 +69,5 @@ distclean: clean
 	rm -fr $(SRCD)/*.otf
 	rm -fr $(DIST)/*.ttf
 	rm -fr $(TMPD)
+	rm -fr $(SRCD)
+	rm -fr $(DIST)
