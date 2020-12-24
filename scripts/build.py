@@ -18,21 +18,21 @@ FSM = [
     ["sourceFonts/FantasqueSansMono-BoldItalic.ttf"],
 ]
 EMOJI = [
-    ["sourceFonts/TwitterColorEmoji-SVGinOT.ttf"]
+    ["sourceFonts/TwitterColorEmoji-SVGinOT-ThickFallback.ttf"]
 ]
 FSM_RMGEN = [
     ["tmp/modified-FantasqueSansMono-Regular.ttf",
      "tmp/modified-rounded-x-mgenplus-1mn-regular.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT.ttf"],
+     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
     ["tmp/modified-FantasqueSansMono-Bold.ttf",
      "tmp/modified-rounded-x-mgenplus-1mn-bold.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT.ttf"],
+     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
     ["tmp/modified-FantasqueSansMono-Italic.ttf",
      "tmp/modified-rounded-x-mgenplus-1mn-oblique.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT.ttf"],
+     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
     ["tmp/modified-FantasqueSansMono-BoldItalic.ttf",
      "tmp/modified-rounded-x-mgenplus-1mn-bold-oblique.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT.ttf"],
+     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
 ]
 FSM_RMGEN_PLUS = [
     ["tmp/FSMRMP-Regular.ttf", "dists"],

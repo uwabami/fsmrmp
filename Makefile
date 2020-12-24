@@ -35,13 +35,24 @@ dl_fsm:
 
 dl_twemoji:
 	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
-	@if [ ! -f $(SRCD)/TwitterColorEmoji-SVGinOT.ttf ] ; then\
+	@if [ ! -f $(SRCD)/TwitterColorEmoji-SVGinOT-ThickFallback.ttf ] ; then\
 	  echo "Download Twitter Color Emoji SVG in OpenType" ;\
-	  wget https://github.com/eosrei/twemoji-color-font/releases/download/v12.0.1/TwitterColorEmoji-SVGinOT-12.0.1.zip ;\
-	  unar TwitterColorEmoji-SVGinOT-12.0.1.zip ;\
-	  cp -v TwitterColorEmoji-SVGinOT-12.0.1/*.ttf $(SRCD)/ ;\
-	  rm -fr TwitterColorEmoji-SVGinOT-12.0.1 ;\
-	  rm -f TwitterColorEmoji-SVGinOT-12.0.1.zip ;\
+	  wget https://github.com/eosrei/twemoji-color-font/releases/download/v13.0.1/TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
+	  unar TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
+	  cp -v TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1/*.ttf $(SRCD)/ ;\
+	  rm -fr TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1 ;\
+	  rm -f TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
+	fi
+
+dl_symbola:
+	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
+	@if [ ! -f $(SRCD)/Symbola.otf ] ; then\
+	  echo "Download Symbola: Multilingual support and Symbol blocks of The Unicode Standard" ;\
+	  wget https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip ;\
+	  unar Symbola.zip ;\
+	  cp -v Symbola/Symbola.otf $(SRCD)/ ;\
+	  rm -fr Symbola ;\
+	  rm -f Symbola.zip ;\
 	fi
 
 dl_icons:
