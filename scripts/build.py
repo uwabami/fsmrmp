@@ -14,8 +14,8 @@ RMGEN = [
 FSM = [
     ["sourceFonts/FantasqueSansMono-Regular.ttf"],
     ["sourceFonts/FantasqueSansMono-Bold.ttf"],
-    ["sourceFonts/FantasqueSansMono-Italic.ttf"],
-    ["sourceFonts/FantasqueSansMono-BoldItalic.ttf"],
+    # ["sourceFonts/FantasqueSansMono-Italic.ttf"],
+    # ["sourceFonts/FantasqueSansMono-BoldItalic.ttf"],
 ]
 EMOJI = [
     ["sourceFonts/TwitterColorEmoji-SVGinOT-ThickFallback.ttf"]
@@ -27,18 +27,18 @@ FSM_RMGEN = [
     ["tmp/modified-FantasqueSansMono-Bold.ttf",
      "tmp/modified-rounded-x-mgenplus-1mn-bold.ttf",
      "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
-    ["tmp/modified-FantasqueSansMono-Italic.ttf",
-     "tmp/modified-rounded-x-mgenplus-1mn-oblique.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
-    ["tmp/modified-FantasqueSansMono-BoldItalic.ttf",
-     "tmp/modified-rounded-x-mgenplus-1mn-bold-oblique.ttf",
-     "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
+    # ["tmp/modified-FantasqueSansMono-Italic.ttf",
+    #  "tmp/modified-rounded-x-mgenplus-1mn-oblique.ttf",
+    #  "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
+    # ["tmp/modified-FantasqueSansMono-BoldItalic.ttf",
+    #  "tmp/modified-rounded-x-mgenplus-1mn-bold-oblique.ttf",
+    #  "tmp/modified-TwitterColorEmoji-SVGinOT-ThickFallback.ttf"],
 ]
 FSM_RMGEN_PLUS = [
     ["tmp/FSMRMP-Regular.ttf", "dists"],
     ["tmp/FSMRMP-Bold.ttf", "dists"],
-    ["tmp/FSMRMP-RegularItalic.ttf", "dists"],
-    ["tmp/FSMRMP-BoldItalic.ttf", "dists"],
+    # ["tmp/FSMRMP-RegularItalic.ttf", "dists"],
+    # ["tmp/FSMRMP-BoldItalic.ttf", "dists"],
 ]
 
 def build(version):
@@ -48,9 +48,9 @@ def build(version):
     print("---- modifying fantasque_sans_mono ----")
     if concurrent_execute(fantasque_sans_mono.modify, FSM):
         return 1
-    print("---- making oblique version of rounded-x-mgenplus ----")
-    if concurrent_execute(rounded_x_mgenplus.oblique, RMGEN):
-        return 1
+    # print("---- making oblique version of rounded-x-mgenplus ----")
+    # if concurrent_execute(rounded_x_mgenplus.oblique, RMGEN):
+    #     return 1
     print("---- modifying Twitter Color Emoji ----")
     if concurrent_execute(emoji.modify, EMOJI):
         return 1
