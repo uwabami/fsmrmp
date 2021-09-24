@@ -10,7 +10,17 @@ build: download
 	@PYTHONPATH=$(CURDIR)/scripts \
 	  python3 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
 
-download: dl_rmgen dl_fsm dl_twemoji dl_icons
+download: dl_rmgen dl_twemoji dl_icons dl_agave
+
+dl_agave:
+	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
+	@if [ ! -f $(SRCD)/Agave-Regular.ttf ] ; then\
+	  echo "Download Agave" ;\
+	  wget https://github.com/blobject/agave/releases/latest/download/Agave-Regular.ttf \
+	    -O $(SRCD)/Agave-Regular.ttf ;\
+	  wget https://github.com/blobject/agave/releases/latest/download/Agave-Bold.ttf \
+	    -O $(SRCD)/Agave-Bold.ttf ;\
+	fi
 
 dl_rmgen:
 	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
