@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import errno
@@ -6,27 +6,189 @@ import os
 import fontforge
 import psMat
 
-ASCENT = 1650
-DESCENT = 398
-OLD_EM = 1024
+ASCENT = 1638
+DESCENT = 410
+OLD_EM = 2048
 EM = ASCENT + DESCENT
 SCALE_DOWN = 0.96
 X_TO_CENTER = EM * (1 - SCALE_DOWN) / 2
 
 PATCH_SET = [
     {
-        "name": "Icon Symbol Font In Terminal Plus",
-        "filename": "isfit-plus.ttf",
-        "sym_start": 0xE000,
-        "sym_end": 0xEEFF,
-        "src_start": None,
+        # Seti-UI + Custom
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE5FA,
+        "sym_end": 0xE6AC,
+        "src_start": 0xE5FA,
     },
     {
-        "name": "Icon Symbol Font In Terminal Plus",
-        "filename": "isfit-plus.ttf",
+        # Devicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE700,
+        "sym_end": 0xE7C5,
+        "src_start": 0xE700,
+    },
+    {
+        # Font Awesome
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
         "sym_start": 0xF000,
-        "sym_end": 0xF8FF,
-        "src_start": None,
+        "sym_end": 0xF2E0,
+        "src_start": 0xF000,
+    },
+    {
+        # Font Awesome Extension
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE200,
+        "sym_end": 0xE2A9,
+        "src_start": 0xE200,
+    },
+    {
+        # Material Design Icon
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xF0001,
+        "sym_end": 0xF1AF0,
+        "src_start": 0xF0001,
+    },
+    {
+        # Weather
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE300,
+        "sym_end": 0xE3E3,
+        "src_start": 0xE300,
+    },
+    {
+        # Octicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xF400,
+        "sym_end": 0xF532,
+        "src_start": 0xF400,
+    },
+    {
+        # Octicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0x2665,
+        "sym_end": 0x2665,
+        "src_start": 0x2665,
+    },
+    {
+        # Octicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0x26A1,
+        "sym_end": 0x26A1,
+        "src_start": 0x26A1,
+    },
+    {
+        # Powerline Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0A0,
+        "sym_end": 0xE0A2,
+        "src_start": 0xE0A0,
+    },
+    {
+        # Powerline Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0B0,
+        "sym_end": 0xE0B3,
+        "src_start": 0xE0B0,
+    },
+    {
+        # Powerline Extra Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0A3,
+        "sym_end": 0xE0A3,
+        "src_start": 0xE0A3,
+    },
+    {
+        # Powerline Extra Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0B4,
+        "sym_end": 0xE0C8,
+        "src_start": 0xE0B4,
+    },
+    {
+        # Powerline Extra Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0CA,
+        "sym_end": 0xE0CA,
+        "src_start": 0xE0CA,
+    },
+    {
+        # Powerline Extra Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE0CC,
+        "sym_end": 0xE0D4,
+        "src_start": 0xE0CC,
+    },
+    {
+        # IEC Power Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0x23FB,
+        "sym_end": 0x23FE,
+        "src_start": 0x23FB,
+    },
+    {
+        # IEC Power Symbols
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0x2B58,
+        "sym_end": 0x2B58,
+        "src_start": 0x2B58,
+    },
+    {
+        # Font Logos
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xF300,
+        "sym_end": 0xF32F,
+        "src_start": 0xF300,
+    },
+    {
+        # Pomicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE000,
+        "sym_end": 0xE00A,
+        "src_start": 0xE000,
+    },
+    {
+        # Codicons
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xEA60,
+        "sym_end": 0xEBEB,
+        "src_start": 0xEA60,
+    },
+    {
+        # Additional: Heavy Angle Brackets
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE276C,
+        "sym_end": 0xE2771,
+        "src_start": 0xE276C,
+    },
+    {
+        # Additional: Box Drawing Char
+        "name": "SymbolsNerdFont",
+        "filename": "SymbolsNerdFont-Regular.ttf",
+        "sym_start": 0xE2500,
+        "sym_end": 0xE259F,
+        "src_start": 0xE2500,
     },
 ]
 
@@ -83,8 +245,3 @@ def _copy_glyphs(font, symfont, info):
         font.selection.select(src_encoding)
         font.paste()
     return
-
-def concurrent_execute(func, args):
-    executor = ProcessPoolExecutor()
-    futures = [executor.submit(func, *a) for a in args]
-    return 1 if any([r.result() for r in as_completed(futures)]) else 0

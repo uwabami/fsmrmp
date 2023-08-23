@@ -1,6 +1,7 @@
 SRCD = sourceFonts
 DIST = dists
 TMPD = tmp
+NERD = FontPatcher
 VERSION = $(shell date '+%Y%m%d%H%M%S')
 all: build
 
@@ -10,13 +11,13 @@ build: download
 	@PYTHONPATH=$(CURDIR)/scripts \
 	  python3 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
 
-download: dl_rmgen dl_fsm dl_twemoji dl_icons
+download: dl_rmgen dl_fsm dl_notoemoji dl_nerdfontsymbolonly
 
 dl_rmgen:
-	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
+	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
 	@if [ ! -f $(SRCD)/rounded-x-mgenplus-1mn-regular.ttf ] ; then\
 	  echo "Download Rounded Mgen+" ;\
-	  wget https://osdn.jp/downloads/users/8/8599/rounded-x-mgenplus-20150602.7z ;\
+	  wget https://ftp.iij.ad.jp/pub/osdn.jp/users/8/8599/rounded-x-mgenplus-20150602.7z ;\
 	  unar rounded-x-mgenplus-20150602.7z ;\
 	  cp -v rounded-x-mgenplus-20150602/rounded-x-mgenplus-1mn*.ttf $(SRCD)/ ;\
 	  rm -fr rounded-x-mgenplus-20150602 ;\
@@ -24,7 +25,7 @@ dl_rmgen:
 	fi
 
 dl_fsm:
-	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
+	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
 	@if [ ! -f $(SRCD)/FantasqueSansMono-Regular.ttf ] ; then\
 	  echo "Download Fantasque Sans Mono" ;\
 	  wget https://fontlibrary.org/assets/downloads/fantasque-sans-mono/b0cbb25e73a9f8354e96d89524f613e7/fantasque-sans-mono.zip ;\
@@ -34,31 +35,26 @@ dl_fsm:
 	  rm -f fantasque-sans-mono.zip ;\
 	fi
 
-dl_twemoji:
-	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
-	@if [ ! -f $(SRCD)/TwitterColorEmoji-SVGinOT-ThickFallback.ttf ] ; then\
-	  echo "Download Twitter Color Emoji SVG in OpenType" ;\
-	  wget https://github.com/eosrei/twemoji-color-font/releases/download/v13.0.1/TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
-	  unar TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
-	  cp -v TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1/*.ttf $(SRCD)/ ;\
-	  rm -fr TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1 ;\
-	  rm -f TwitterColorEmoji-SVGinOT-ThickFallback-13.0.1.zip ;\
+dl_notoemoji:
+	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
+	@if [ ! -f $(SRCD)/NotoEmoji-Regular.ttf ] ; then\
+	  echo "Download Noto Emoji Monchrome" ;\
+	  wget "https://fonts.google.com/download?family=Noto%20Emoji" -O Emoji.zip;\
+	  unar Emoji.zip ;\
+	  cp -v Emoji/static/NotoEmoji-Regular.ttf $(SRCD)/ ;\
+	  rm -fr Emoji ;\
+	  rm -f Emoji.zip ;\
 	fi
 
-dl_symbola:
-	@[ -d $(SRCD) ] ||  mkdir -p $(SRCD)
-	@if [ ! -f $(SRCD)/Symbola.otf ] ; then\
-	  echo "Download Symbola: Multilingual support and Symbol blocks of The Unicode Standard" ;\
-	  wget https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip ;\
-	  unar Symbola.zip ;\
-	  cp -v Symbola/Symbola.otf $(SRCD)/ ;\
-	  rm -fr Symbola ;\
-	  rm -f Symbola.zip ;\
-	fi
-
-dl_icons:
-	@if [ ! -f $(SRCD)/isfit-plus.ttf ] ; then\
-	  wget https://github.com/uwabami/isfit-plus/raw/master/dists/isfit-plus.ttf -O $(SRCD)/isfit-plus.ttf ;\
+dl_nerdfontsymbolonly:
+	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
+	@if [ ! -f $(SRCD)/SymbolsNerdFont-Regular.ttf ] ; then\
+	  echo "Download NerdFontSymbolOnly" ;\
+	  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip ;\
+	  unar NerdFontsSymbolsOnly.zip ;\
+	  cp -v NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf $(SRCD)/ ;\
+	  rm -fr NerdFontsSymbolsOnly ;\
+	  rm -f NerdFontsSymbolsOnly.zip ;\
 	fi
 
 clean:

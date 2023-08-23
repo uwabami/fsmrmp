@@ -1,16 +1,16 @@
 # -*- coding:utf-8 -*-
-## Twitter Color Emoji or Symbola
+## NotoEmoji monochrome
 
 from os.path import basename, splitext
 import fontforge
 import psMat
 
-ASCENT = 1650
-DESCENT = 398
+ASCENT = 1638
+DESCENT = 410
 OLD_EM = 2048
 EM = ASCENT + DESCENT
-SCALE_DOWN = 0.98
-X_TO_CENTER = EM * (1 - SCALE_DOWN) / 2
+SCALE_DOWN = 0.9
+X_TO_CENTER = - EM * (1 - SCALE_DOWN) / 2
 # OBLIQUE_SKEW = 0.2
 
 def modify(in_file):
@@ -39,8 +39,8 @@ def _set_new_em(font):
     """
     font.selection.all()
     font.unlinkReferences()
-    font.ascent = float(ASCENT) / EM * OLD_EM
-    font.descent = float(DESCENT) / EM * OLD_EM
+    font.ascent = round(float(ASCENT) / EM * OLD_EM)
+    font.descent = round(float(DESCENT) / EM * OLD_EM)
     font.em = EM
 
 def _set_proportion(font):

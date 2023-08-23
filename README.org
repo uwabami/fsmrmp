@@ -2,22 +2,19 @@
 * FSMRMP - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+'
 ** Overview
 
-   [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]] is a monospace font with a distinct slightly
-   cursive look. The fonts "FSMRMP" (*wanted! awesome fontname*) is based on
-   *Fantasque Sans Mono*, and add glpyhs for Japanese from  [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]],
-   and patched icon fonts into Private Use Area.
+   The fonts "FSMRMP" is a font that combines [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]], [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]], [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]] (Monochrome) and [[https://github.com/ryanoasis/nerd-fonts][Nerd fonts]] icons.
 
 ** Build
 *** Requirements
     - make
     - python3:
-    - python3-concurrent: for parallel builds
     - python3-fontforge
-    - unar: expand donwload files
-*** Ubuntu 19.04, Debian (>= 10.0)
+    - wget: download sources.
+    - unar: expand donwload files.
+*** Ubuntu 20.04, Debian (>= 12.0)
     #+begin_src shell
-sudo apt install make wget unar python3 python3-concurrent.futures python3-fontforge
-make
+% sudo apt install make wget unar python3 python3-fontforge
+% make
     #+end_src
     check =dists= directory.
 ** Font sources
@@ -26,17 +23,16 @@ make
    only be used to represent the company or product to which they refer.
 
    Base fonts:
-   |---------------------+----------+--------------|
-   | Name                |  Version | License      |
-   |---------------------+----------+--------------|
-   | [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]] |       11 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   | [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]]   | 20150602 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   | [[https://github.com/eosrei/twemoji-color-font][twemoji color font]]  |  v12.0.1 | [[https://github.com/eosrei/twemoji-color-font/blob/master/LICENSE-CC-BY.txt][CC BY-4.0]]    |
-   |---------------------+----------+--------------|
-
-   Icon fontset: @see [[https://github.com/uwabami/isfit-plus][isfit+]]
+   |-------------------------+----------+--------------|
+   | Name                    | Version  | License      |
+   |-------------------------+----------+--------------|
+   | [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]]     | 1.8.0    | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]]       | 20150602 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]]              | v15.0.0  | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/NerdFontsSymbolsOnly][Nerd Fonts Symbols Only]] | v3.0.2   | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   |-------------------------+----------+--------------|
 
 ** References.
 
-   Original build scripts provided by [[https://github.com/delphinus/homebrew-sfmono-square][SFMono Square - patched font: SFMono + Migu 1M + Nerd Fonts]].
+   Original build scripts inspired by [[https://github.com/delphinus/homebrew-sfmono-square][SFMono Square - patched font: SFMono + Migu 1M + Nerd Fonts]].
    Thanks to great scripts!

@@ -1,13 +1,13 @@
 # -*- coding:utf-8 -*-
 ## Fantasque Sans Mono
-# Ascent: 1650
-# Descent: 398
+# Ascent: 1638
+# Descent: 410
 # Width: 1060
 # EM: 2048
 
 from os.path import basename, splitext
 import fontforge
-import psMat
+from psMat import scale
 
 OLD_WIDTH = 1060
 WIDTH = 1024
@@ -25,8 +25,14 @@ def modify(in_file):
 
 
 def _set_proportion(font):
-    mat = psMat.scale(SCALE_DOWN)
+    mat = scale(SCALE_DOWN)
     font.selection.all()
+    scaled = set()
     for glyph in list(font.selection.byGlyphs):
-        glyph.transform(mat)
+        codepoint = glyph.unicode
+        if codepoint != -1 and codepoint in scaled:
+            print(f"this is already scaled: {codepoint:#x}")
+        else:
+            glyph.transform(mat)
+            scaled.add(codepoint)
         glyph.width = WIDTH

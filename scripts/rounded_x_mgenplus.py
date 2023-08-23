@@ -15,7 +15,7 @@ OLD_EM = 1024
 EM = ASCENT + DESCENT
 SCALE_DOWN = 0.94 # 1650/(881*2.0)
 X_TO_CENTER = EM * (1 - SCALE_DOWN) / 2
-HANKAKU_KANA = (0xFF60, 0xFF9F)
+HANKAKU_KANA = (0xFF61, 0xFF9F)
 OBLIQUE_SKEW = 0.2
 
 def modify(in_file):
@@ -47,8 +47,8 @@ def _set_new_em(font):
     """
     font.selection.all()
     font.unlinkReferences()
-    font.ascent = float(ASCENT) / EM * OLD_EM
-    font.descent = float(DESCENT) / EM * OLD_EM
+    font.ascent = round(float(ASCENT) / EM * OLD_EM)
+    font.descent = round(float(DESCENT) / EM * OLD_EM)
     font.em = EM
 
 
@@ -61,7 +61,7 @@ def _set_proportion(font):
         trans = psMat.translate(x_to_center, 0)
         mat = psMat.compose(scale, trans)
         glyph.transform(mat)
-        glyph.width = EM / 2 if is_hankaku_kana else EM
+        glyph.width = round(EM / 2) if is_hankaku_kana else EM
 
 
 def _zenkaku_space(font):
