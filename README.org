@@ -4,6 +4,8 @@
 
    The fonts "FSMRMP" is a font that combines [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]], [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]], [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]] (Monochrome) and [[https://github.com/ryanoasis/nerd-fonts][Nerd fonts]] icons.
 
+#+html: <a href="screenshot.png"><img src="screenshot.webp" alt="ScreenShot"></a>
+
 ** Build
 *** Requirements
     - make
