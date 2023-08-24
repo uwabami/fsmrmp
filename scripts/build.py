@@ -43,22 +43,22 @@ FSM_RMGEN_PLUS = [
 ]
 
 def build(version):
-    # print("---- modifying rounded-x-mgenplus ----")
-    # if concurrent_execute(rounded_x_mgenplus.modify, RMGEN):
-    #     return 1
-    # print("---- modifying fantasque_sans_mono ----")
-    # if concurrent_execute(fantasque_sans_mono.modify, FSM):
-    #     return 1
-    # print("---- making oblique version of rounded-x-mgenplus ----")
-    # if concurrent_execute(rounded_x_mgenplus.oblique, RMGEN):
-    #     return 1
-    # print("---- modifying Noto Emoji ----")
-    # if concurrent_execute(emoji.modify, EMOJI):
-    #     return 1
-    # print("---- generate Fantasque Sans Mono Rounded Mgen+  ----")
-    # args = [a + [version] for a in FSM_RMGEN]
-    # if concurrent_execute(fsmrmp.generate, args):
-    #     return 1
+    print("---- modifying rounded-x-mgenplus ----")
+    if concurrent_execute(rounded_x_mgenplus.modify, RMGEN):
+        return 1
+    print("---- modifying fantasque_sans_mono ----")
+    if concurrent_execute(fantasque_sans_mono.modify, FSM):
+        return 1
+    print("---- making oblique version of rounded-x-mgenplus ----")
+    if concurrent_execute(rounded_x_mgenplus.oblique, RMGEN):
+        return 1
+    print("---- modifying Noto Emoji ----")
+    if concurrent_execute(emoji.modify, EMOJI):
+        return 1
+    print("---- generate Fantasque Sans Mono Rounded Mgen+  ----")
+    args = [a + [version] for a in FSM_RMGEN]
+    if concurrent_execute(fsmrmp.generate, args):
+        return 1
     print("---- adding Nerd Icons ----")
     if concurrent_execute(font_patcher.patch, FSM_RMGEN_PLUS):
         return 1

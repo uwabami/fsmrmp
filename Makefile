@@ -11,7 +11,7 @@ build: download
 	@PYTHONPATH=$(CURDIR)/scripts \
 	  python3 -c "import sys;import build; sys.exit(build.build('$(VERSION)'))"
 
-download: dl_rmgen dl_fsm dl_notoemoji dl_nerdfontsymbolonly
+download: dl_rmgen dl_fsm dl_notoemoji dl_isfit
 
 dl_rmgen:
 	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
@@ -46,15 +46,11 @@ dl_notoemoji:
 	  rm -f Emoji.zip ;\
 	fi
 
-dl_nerdfontsymbolonly:
+dl_isfit:
 	@[ -d $(SRCD) ] ||	mkdir -p $(SRCD)
-	@if [ ! -f $(SRCD)/SymbolsNerdFont-Regular.ttf ] ; then\
-	  echo "Download NerdFontSymbolOnly" ;\
-	  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip ;\
-	  unar NerdFontsSymbolsOnly.zip ;\
-	  cp -v NerdFontsSymbolsOnly/SymbolsNerdFont-Regular.ttf $(SRCD)/ ;\
-	  rm -fr NerdFontsSymbolsOnly ;\
-	  rm -f NerdFontsSymbolsOnly.zip ;\
+	@if [ ! -f $(SRCD)/isfit-plus.ttf ] ; then\
+	  echo "Download isfit+" ;\
+	  wget https://github.com/uwabami/isfit-plus/raw/master/dists/isfit-plus.ttf -O $(SRCD)/isfit-plus.ttf ;\
 	fi
 
 clean:

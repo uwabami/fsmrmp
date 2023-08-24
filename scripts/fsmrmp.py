@@ -116,7 +116,7 @@ def new_font(opts):
     font.os2_weight = prop["os2_weight"]
     font.os2_width = 5  # Medium (w/h = 1.000)
     font.os2_fstype = 4  # Printable Document (suitable for SF Mono)
-    font.os2_vendor = "delp"  # me
+    font.os2_vendor = "YS"  # me
     font.os2_family_class = 2057  # SS Typewriter Gothic
     font.os2_panose = (
         2,  # Latin: Text and Display
