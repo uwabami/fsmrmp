@@ -195,7 +195,7 @@ PATCH_SET = [
         "name": "isfit+",
         "filename": "isfit-plus.ttf",
         "sym_start": 0xE0E0,
-        "sym_end": 0xE11D,
+        "sym_end": 0xE11E,
         "src_start": 0xE0E0,
     },
     {
