@@ -2,7 +2,7 @@
 * FSMRMP - Patched Font: 'Fantasque Sans Mono' + 'Rounded Mgen+'
 ** Overview
 
-   The fonts "FSMRMP" is a font that combines [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]], [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]], [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]] (Monochrome) and [[https://github.com/ryanoasis/nerd-fonts][Nerd fonts]] icons.
+   The fonts "FSMRMP" is a font that combines [[https://fontlibrary.org/en/font/fantasque-sans-mono][Fantasque Sans Mono]], [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]], [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]] (Monochrome) and [[https://github.com/uwabami/isfit-plus][isfit+]] icons.
 
 #+html: <a href="screenshot.png"><img src="screenshot.webp" alt="ScreenShot"></a>
 
@@ -25,15 +25,14 @@
    only be used to represent the company or product to which they refer.
 
    Base fonts:
-   |-------------------------+----------+--------------|
-   | Name                    | Version  | License      |
-   |-------------------------+----------+--------------|
-   | [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]]     | 1.8.0    | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   | [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]]       | 20150602 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   | [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]]              | v15.0.0  | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   | [[https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/NerdFontsSymbolsOnly][Nerd Fonts Symbols Only]] | v3.0.2   | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
-   |-------------------------+----------+--------------|
-
+   |---------------------+----------+--------------|
+   | Name                | Version  | License      |
+   |---------------------+----------+--------------|
+   | [[https://fontlibrary.org/en/font/fantasque-sans-mono#Fantasque%2520Sans%2520Mono-Regular][Fantasque Sans Mono]] | 1.8.0    | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[http://jikasei.me/font/rounded-mgenplus/][Rounded Mgen plus]]   | 20150602 | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[https://fonts.google.com/noto/specimen/Noto+Emoji][Noto Emoji]]          | v15.0.0  | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   | [[https://github.com/uwabami/isfit-plus][isfit+]]              | -        | [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL OFL v1.1]] |
+   |---------------------+----------+--------------|
 ** References.
 
    Original build scripts inspired by [[https://github.com/delphinus/homebrew-sfmono-square][SFMono Square - patched font: SFMono + Migu 1M + Nerd Fonts]].
